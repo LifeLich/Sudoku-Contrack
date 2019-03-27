@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\SudokuContrack\\SudokuContrack.csproj",
-      "projectName": "SudokuContrack",
-      "projectPath": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\SudokuContrack\\SudokuContrack.csproj",
+      "projectUniqueName": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\Client\\Client.csproj",
+      "projectName": "Client",
+      "projectPath": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\Life-Lich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\SudokuContrack\\obj\\",
+      "outputPath": "C:\\Users\\Life-Lich\\Desktop\\LoadBalance\\Sudoku-Contrack\\SudokuContrack\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
