@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace SudokuContrack
 {
@@ -6,24 +7,70 @@ namespace SudokuContrack
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int[,] map = new int[9, 9] { 
-                {0,1,2,3,4,5,6,7,8}, 
-                {1,0,6,4,5,6,7,8,9},
-                {2,5,0,4,5,6,7,8,9},
-                {3,5,6,0,5,6,7,8,9},
-                {4,5,6,4,0,6,7,8,9},
-                {5,5,6,4,5,0,7,8,9},
-                {6,5,6,4,5,6,0,8,9},
-                {7,5,6,4,5,6,7,0,9},
-                {8,5,6,4,5,6,7,8,0}};
+            int[,] map = new int[9, 9] {
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0}};
+
+            EditTable(map);
             
-            UiSetup(map);
+            Console.WriteLine("Send");
+
             Console.ReadLine();
         }
 
-        private static void UiSetup(int[,] map)
+        private static void EditTable(int[,] map)
         {
+            while (true)
+            {
+                Console.WriteLine("Type Exit At any Point To Leave To Leave");
+                UiGridSetup(map);
+                int x = -5;
+                while (x <= 0 || x >= 11)
+                {
+                    Console.WriteLine("Type in the y coordinate");
+                    string text = Console.ReadLine();
+                    if (text.ToLower() == "exit")
+                    {
+                        return;
+                    }
+                    x = Int32.Parse(text);
+                }
+                int y = -5;
+                while (y <= 0 || y >= 11)
+                {
+                    Console.WriteLine("Type in the x coordinate");
+                    string text = Console.ReadLine();
+                    if (text.ToLower() == "exit")
+                    {
+                        return;
+                    }
+                    y = Int32.Parse(text);
+                }
+                int number = -5;
+                while (number <= -1 || number >= 10)
+                {
+                    Console.WriteLine("Type in the number 0 to 9");
+                    string text = Console.ReadLine();
+                    if (text.ToLower() == "exit")
+                    {
+                        return;
+                    }
+                    number = Int32.Parse(text);
+                }
+                map[x - 1, y - 1] = number;
+            }
+        }
+
+        private static void UiGridSetup(int[,] map)
+        {
+            Console.Clear();
             Console.WriteLine("------------------");
             for (int x = 0; x < 9; x++)
             {
