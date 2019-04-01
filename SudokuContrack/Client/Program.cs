@@ -1,9 +1,11 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Net.Http;
 namespace Client
 {
     class Program
     {
+        private static readonly HttpClient client = new HttpClient();
         static void Main(string[] args)
         {
             int[,] map = new int[9, 9] {
@@ -19,9 +21,25 @@ namespace Client
 
             EditTable(map);
 
+            Console.WriteLine("Sending");
+            Post();
             Console.WriteLine("Send");
-
             Console.ReadLine();
+        }
+
+        private static void Post()
+        {
+            var values = new Dictionary<string, string>
+            {
+                { "thing1", "hello" },
+                { "thing2", "world" }
+            };
+
+            var content = new FormUrlEncodedContent(values);
+
+            //var response = await client.PostAsync("http://www.example.com/recepticle.aspx", content);
+
+            //var responseString = await response.Content.ReadAsStringAsync();
         }
 
         private static void EditTable(int[,] map)
