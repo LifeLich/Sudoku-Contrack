@@ -16,13 +16,6 @@ namespace Backend.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         // GET api/values/5
         [HttpGet("{value}")]
         public ActionResult<string> Get(string value)
@@ -39,7 +32,7 @@ namespace Backend.Controllers
                 int k = 0;
                 for (int j = 0; j < 9 && i % 8 == 0; j++)
                 {
-                    map[k, j] = charr[i];
+                    map[k, j] = Int32.Parse(charr[i].ToString());
                     k++;
                 }
             }
@@ -47,27 +40,8 @@ namespace Backend.Controllers
             //var storage = value.Clone();
             var solver = new Solver();
             if (solver.solve(map))
-                return new OkObjectResult(map);
+                return new OkObjectResult(value);
             return StatusCode(418);
-        }
-
-        // POST api/values
-        [HttpPost]
-        public ActionResult<string> Post([FromBody] string value)
-        {
-            return NotFound();
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

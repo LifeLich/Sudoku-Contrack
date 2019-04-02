@@ -26,7 +26,7 @@ namespace Client
 
         public async void PostDataAsync(string postData)
         {
-            var response = await client.GetAsync("https://localhost:44318/api/Sudoku/" + postData);
+            var response = await client.GetAsync("https://localhost:44318/api/sudoku/" + postData);
 
             string text = await response.Content.ReadAsStringAsync();
 
