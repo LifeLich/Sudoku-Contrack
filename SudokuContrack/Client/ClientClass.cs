@@ -1,39 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Text;  // for class Encoding
-using System.IO;    // for StreamReader
-
-
+using System.Text;
+using System.IO;
+using System.Net.Http;
 namespace Client
 {
     class ClientClass
     {
+        private static readonly HttpClient client = new HttpClient();
         public void Post(int[,] map)
         {
             string postData = "";
             for (int x = 0; x < 9; x++)
             {
-                postData += "|";
                 for (int y = 0; y < 9; y++)
                 {
-                    postData += "{X" + x + "Y" + y + "value" + map[x, y]+"}";
+                    postData += map[x, y]+"";
                 }
             }
-            var request = (HttpWebRequest)WebRequest.Create("http://www.example.com/recepticle.aspx");
-            var data = Encoding.ASCII.GetBytes(postData);
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = data.Length;
+            PostDataAsync(postData);
+        }
 
-            using (var stream = request.GetRequestStream())
-            {
-                stream.Write(data, 0, data.Length);
-            }
+        public async void PostDataAsync(string postData)
+        {
+            var response = await client.GetAsync("https://localhost:44341/api/Sudoku/" + postData);
 
-            var response = (HttpWebResponse)request.GetResponse();
+            string text = await response.Content.ReadAsStringAsync();
 
-            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            Console.WriteLine(text);
 
         }
     }

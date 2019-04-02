@@ -31,8 +31,8 @@ namespace Client
         {
             while (true)
             {
-                Console.WriteLine("Type Exit At any Point To Leave To Leave");
                 UiGridSetup(map);
+                Console.WriteLine("Type (Exit) At any Point To Leave To Leave");
                 int x = -5;
                 while (x <= 0 || x >= 11)
                 {
