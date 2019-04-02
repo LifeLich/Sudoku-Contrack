@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokuContrack", "SudokuCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{33BE93CB-3232-4ECC-AFDF-3C2044C8B6AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{72EA03F2-1DA8-444E-8880-10EB54856390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{72EA03F2-1DA8-444E-8880-10EB54856390}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.csproj", "{62896DE7-6CB7-4A2A-8F3F-727E54B705DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{72EA03F2-1DA8-444E-8880-10EB54856390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72EA03F2-1DA8-444E-8880-10EB54856390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72EA03F2-1DA8-444E-8880-10EB54856390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62896DE7-6CB7-4A2A-8F3F-727E54B705DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62896DE7-6CB7-4A2A-8F3F-727E54B705DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62896DE7-6CB7-4A2A-8F3F-727E54B705DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62896DE7-6CB7-4A2A-8F3F-727E54B705DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,6 +4,8 @@ using System.Net;
 using System.Text;
 using System.IO;
 using System.Net.Http;
+using System.Linq;
+
 namespace Client
 {
     class ClientClass
@@ -24,12 +26,41 @@ namespace Client
 
         public async void PostDataAsync(string postData)
         {
-            var response = await client.GetAsync("https://localhost:44341/api/Sudoku/" + postData);
+            var response = await client.GetAsync("https://localhost:44318/api/Sudoku/" + postData);
 
             string text = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine(text);
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                Console.WriteLine("not possible");
+            }
+            else
+            {
+                Program.UiGridSetup(stringToMap(text));
+            }
+            
+        }
 
+        private static int[,] stringToMap(string textMap)
+        {
+            int[,] map = new int[9, 9];
+
+            List<char> datalist = new List<char>();
+            datalist.AddRange(textMap);
+
+            var result = datalist.Select(c => c.ToString()).ToList();
+
+            int num = 0;
+            for (int x = 0; x < 9; x++)
+            {
+                for (int y = 0; y < 9; y++)
+                {
+                    map[x, y] = Convert.ToInt32(result[num]);
+                    num++;
+                }
+            }
+
+            return map;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Server.Controllers
         [HttpGet("{value}")]
         public string Post(string value)
         {
-            return "Simon var dum "+value;
+            return value;
         }
     }
 }

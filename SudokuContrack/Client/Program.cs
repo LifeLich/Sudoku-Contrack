@@ -70,7 +70,7 @@ namespace Client
             }
         }
 
-        private static void UiGridSetup(int[,] map)
+        public static void UiGridSetup(int[,] map)
         {
             Console.Clear();
             Console.WriteLine("------------------");

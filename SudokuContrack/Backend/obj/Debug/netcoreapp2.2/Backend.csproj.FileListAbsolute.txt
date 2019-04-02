@@ -1,0 +1,14 @@
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\bin\Debug\netcoreapp2.2\Backend.deps.json
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\bin\Debug\netcoreapp2.2\Backend.runtimeconfig.json
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\bin\Debug\netcoreapp2.2\Backend.runtimeconfig.dev.json
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\bin\Debug\netcoreapp2.2\Backend.dll
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\bin\Debug\netcoreapp2.2\Backend.pdb
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.csprojAssemblyReference.cache
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.csproj.CoreCompileInputs.cache
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.RazorAssemblyInfo.cache
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.RazorAssemblyInfo.cs
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.AssemblyInfoInputs.cache
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.AssemblyInfo.cs
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.RazorTargetAssemblyInfo.cache
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.dll
+D:\UserData\Projects\CS\Sudoku-Contrack\SudokuContrack\Backend\obj\Debug\netcoreapp2.2\Backend.pdb
